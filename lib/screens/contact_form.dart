@@ -65,7 +65,7 @@ class _ContactFormState extends State<ContactForm> {
     final String name = _nameController.text;
     final int? accountNumber = int.tryParse(_accountNumberController.text);
     if (accountNumber != null && name.isNotEmpty) {
-      final Contact newContact = Contact(0, name, accountNumber);
+      final Contact newContact = Contact(id: 0, name: name, accountNumber: accountNumber);
       _dao.save(newContact).then((id) => Navigator.pop(context));
     } else {
       ScaffoldMessenger.of(context).showSnackBar(_openSnackbar('Error to try create contact'));

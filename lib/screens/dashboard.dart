@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:web_api/functions/functions.dart';
 import 'package:web_api/screens/contacts_list.dart';
+import 'package:web_api/screens/transactions_screen.dart';
 import 'package:web_api/widget/custom_padding.dart';
 
 class Dashboard extends StatelessWidget {
@@ -35,8 +36,8 @@ class Dashboard extends StatelessWidget {
                 CustomPadding(
                   label: 'Transaction feed',
                   icon: Icons.monetization_on,
-                  function: () => navigateTo<ContactsList, Void>(
-                      context: context, widget: ContactsList()),
+                  function: () => navigateTo<TransactionsList, Void>(
+                      context: context, widget: TransactionsList()),
                 ),
               ],
             ),
